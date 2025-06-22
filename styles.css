@@ -1,0 +1,92 @@
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2em;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card .card-content {
+    padding: 15px;
+}
+
+.card .card-content h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #00d2ff;
+    transition: color 0.3s ease;
+}
+
+.card .card-content h2:hover {
+    color: #3a7bd5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #888;
+    margin-top: 40px;
+}
+
+/* 动效 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+}
